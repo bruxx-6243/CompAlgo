@@ -112,13 +112,13 @@ void Deque::print() {
 
 int main() {
 	srand(time(NULL));
-	Deque d2(50, rand() % 1000);
+	Deque d2(50, 10);
 
-	for (int i = 0; i < 50 / 2; i++) 
-		d2.push_first(rand() % 1000);
+	for (int i = 0; i < 30; i += 3) 
+		d2.push_first( i - 20);
 	
-	for (int i = 0; i < 50 /2 ; i++) 
-		d2.push_last(rand() % 1000);
+	for (int i = 0; i < 20 ; i+=2) 
+		d2.push_last(i);
 
 	d2.print();
 
